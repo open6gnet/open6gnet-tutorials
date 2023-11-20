@@ -1,0 +1,44 @@
+site_name: Open6GNet Tutorials
+site_url: https://open6gnet-tutorials.github.io
+# We use the material theme
+theme:
+  name: material
+  logo: assets/img/open6gnet-logo_small.png
+  palette:
+    - scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+
+extra_css:
+  - assets/css/extra.css
+
+nav:
+  - Home:
+    - Welcome: './home/home.md'
+    - About Open6GNet: './home/about.md'
+  - 5G Core:
+    - Fundamentals: './5g-networks/5g-core/fundamentals.md'
+  - 5G Backhauling:
+    - Fundamentals: './5g-networks/5g-backhauling/fundamentals.md'
+    - Dependable Backhauls: './5g-networks/5g-backhauling/dependable-backhauls.md'
+  - 5G Management and Orchestration: './5g-networks/5g-core'
+  - 5G RAN:
+    - 5G RAN Fundamentals: './5g-networks/5g-ran/fundamentals.md'
+    - Open RAN: './5g-networks/5g-ran/open-ran.md'
+    - O-RAN Alliance:
+      - SMO:
+        - Architecture:  './5g-networks/5g-ran/o-ran-alliance.md'
+  - Tooling: './tooling'
