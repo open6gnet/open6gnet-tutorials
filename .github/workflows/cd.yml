@@ -6,7 +6,7 @@ on:
       - main
       - test_build
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -30,10 +30,10 @@ jobs:
         chmod -c -R +rX "site/" | while read line; do
           echo "::warning title=Invalid file permissions automatically fixed::$line"
         done
-    - name: Deploy to GitHub Pages
-      uses: actions/upload-pages-artifact@v1
-      with:
-        artifact-name: github-pages
-        path: site
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
     - name: Upload Github Pages artifact
-      uses: actions/upload-artifact@v2
+      id: deployment
+      uses: actions/deploy-pages@v2
