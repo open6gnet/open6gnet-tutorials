@@ -30,6 +30,11 @@ jobs:
         chmod -c -R +rX "site/" | while read line; do
           echo "::warning title=Invalid file permissions automatically fixed::$line"
         done
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: github-pages
+        path: site
   deploy:
     permissions:
       pages: write
