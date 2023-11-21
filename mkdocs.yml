@@ -1,5 +1,5 @@
 site_name: Open6GNet Tutorials
-site_url: https://open6gnet-tutorials.github.io
+site_url: https://open6gnet.github.io/open6gnet-tutorials/
 # We use the material theme
 theme:
   name: material
