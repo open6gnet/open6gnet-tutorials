@@ -21,13 +21,15 @@ theme:
     code: Roboto Mono
   features:
     - navigation.tabs
+  custom_dir: overrides/
 
 extra_css:
   - assets/css/extra.css
 
+
 nav:
   - Home:
-    - Welcome: './home/home.md'
+    - 'index.md'
     - About Open6GNet: './home/about.md'
   - 5G Core:
     - Fundamentals: './5g-networks/5g-core/fundamentals.md'
