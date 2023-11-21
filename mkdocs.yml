@@ -30,7 +30,6 @@ extra_css:
 nav:
   - Home:
     - 'index.md'
-    - About Open6GNet: './home/about.md'
   - 5G Core:
     - Fundamentals: './5g-networks/5g-core/fundamentals.md'
   - 5G Backhauling:
@@ -44,6 +43,6 @@ nav:
     - O-RAN Alliance:
       - './5g-networks/5g-ran/o-ran-alliance/o-ran-alliance.md'
       - SMO:
-        - Architecture:  '/5g-networks/5g-ran/o-ran-alliance/smo/architecture.md'
+        - Architecture:  './5g-networks/5g-ran/o-ran-alliance/smo/architecture.md'
   - Tooling:
     - Overview: './5g-networks/tooling/overview.md'

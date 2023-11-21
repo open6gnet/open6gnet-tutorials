@@ -1,1 +1,0 @@
-# About Open6GNet
