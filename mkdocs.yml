@@ -21,15 +21,85 @@ theme:
     code: Roboto Mono
   features:
     - navigation.tabs
+    - navigation.sticky
+    - navigation.sections
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # disable exapnd button in menu
   custom_dir: overrides/
 
 extra_css:
   - assets/css/extra.css
 
+plugins:
+  - search
+  - blog
+  - rss:
+     match_path: blog/posts/.*
+     date_from_meta:
+       as_creation: date
+     categories:
+       - categories
+       - tags
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 nav:
-  - Home:
-    - 'index.md'
+  - Home: 'index.md'
+  - Blog:
+    - blog/index.md
   - 5G Core:
     - Fundamentals: './5g-networks/5g-core/fundamentals.md'
   - 5G Backhauling:
