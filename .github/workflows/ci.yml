@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone private repo
-        run: git clone "https://mathias.brito:$GITLAB_TOKEN@git.tu-berlin.de/open6gnet/open6gnet-docs.git" main
+        run: git clone "https://oauth2:$GITLAB_TOKEN@git.tu-berlin.de/open6gnet/open6gnet-docs.git" main
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
