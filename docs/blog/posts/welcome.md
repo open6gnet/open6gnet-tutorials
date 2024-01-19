@@ -9,7 +9,7 @@ authors: [ mathiasbrito ]
 # Welcome to the Open6GNet Blog!
 
 Welcome to our new Blog. Here we will post the latest news regarding our project and 5G Networks. Since the rollout of
-5G Networks, a lot still need to be done, and many oportunities are available for research and development. Our main
+5G Networks, a lot still need to be done, and many opportunities are available for research and development. Our main
 target is to provide a platform that will make it easier to learn, experiment and develop new solutions for 5G Networks.
 
 Our current focus are concentrated in tree main areas:
